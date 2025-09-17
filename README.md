@@ -1,53 +1,16 @@
-# travel-mate
+# TravelMate — Destination Explorer
 
-## Project setup
-```
-npm install
-```
+Description
+A lightweight web app to search countries or cities and view live destination data: basic place details, current weather, and related images. No database — all data fetched live. Backend acts as a secure proxy for external API keys.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Features
+- Search by country or city name
+- Show place details: name, region, population
+- Current weather via OpenWeather
+- Related images via Pixabay
+- Node.js proxy server to hide API keys (no DB)
 
-### Run frontend + backend in development
-Start the backend server then the Vue dev server in separate terminals:
-```
-node server/index.js
-npm run serve
-```
-
-Or run both with `concurrently` (install first):
-```
-npm install -D concurrently
-npm run serve:all
-```
-
-### Environment
-Copy `server/.env.example` to `server/.env` and fill your API keys. The backend reads `VUE_APP_OPENWEATHER_API_KEY` and `VUE_APP_PIXABAY_API_KEY` and proxies requests under `/api`.
-
-### Install backend dependencies
-From the project root run:
-```
-npm install express cors dotenv node-fetch@2
-```
-
-### API endpoints (proxied)
-- `GET /api/country?q=NAME` — REST Countries search
-- `GET /api/weather?q=PLACE` — OpenWeather current weather
-- `GET /api/images?q=TERM` — Pixabay images
-
-No database is used; the app fetches live data from the external APIs.
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Stack
+- Frontend: Vue 3 (Vue CLI v5), TailwindCSS v4 (utilities only), Babel
+- Backend: Node.js (Express) proxy server, dotenv, node-fetch
+- APIs: OpenWeather, Pixabay
