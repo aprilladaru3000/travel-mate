@@ -14,3 +14,5 @@ Stack
 - Frontend: Vue 3 (Vue CLI v5), TailwindCSS v4 (utilities only), Babel
 - Backend: Node.js (Express) proxy server, dotenv, node-fetch
 - APIs: OpenWeather, Pixabay
+
+See `CODE_PROGRESSION.md` for a development timeline and next steps.
